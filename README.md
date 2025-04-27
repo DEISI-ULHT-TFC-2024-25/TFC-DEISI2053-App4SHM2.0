@@ -33,3 +33,4 @@ python manage.py createsuperuser
 
 fazer pub get
 
+fazer run da app

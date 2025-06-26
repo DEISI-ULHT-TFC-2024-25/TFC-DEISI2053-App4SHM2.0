@@ -1,7 +1,7 @@
 # Guia de instalação:
 
 dependências:
-java 17 , flutter, mysql
+java 17 , flutter 3.19.3 , mysql
 
 ## Instalaçao do server:
 

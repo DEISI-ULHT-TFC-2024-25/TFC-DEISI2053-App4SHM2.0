@@ -1,0 +1,14 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+    Structures
+{% endblock %}
+
+{% block body %}
+    <h1>Structures</h1>
+    <ul>
+        {%  for structure in structures %}
+            <li>{{ structure }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

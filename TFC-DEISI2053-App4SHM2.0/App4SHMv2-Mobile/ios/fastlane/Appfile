@@ -1,0 +1,8 @@
+app_identifier("pt.ulusofona.deisi.labs.app4shm") # The bundle identifier of your app
+apple_id("pedro.h.alves@gmail.com") # Your Apple Developer Portal username
+
+itc_team_id("38823804") # App Store Connect Team ID
+team_id("ZV77FNMBXP") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

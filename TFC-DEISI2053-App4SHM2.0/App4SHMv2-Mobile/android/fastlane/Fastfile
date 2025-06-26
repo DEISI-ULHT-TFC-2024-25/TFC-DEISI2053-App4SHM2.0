@@ -1,0 +1,35 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Upload a alpha build to Google Play"
+    lane :alpha do
+      gradle(task: "clean")
+
+      # Build the Flutter app for release with the desired flavor (e.g., "dev" or "prod")
+      sh "flutter build appbundle"
+
+      # Upload the APK to Google Play
+      supply(
+        package_name: "pt.ulusofona.deisi.labs.app4shm2", # Replace with your app's package name
+        aab: "../build/app/outputs/bundle/release/app-release.aab", # Replace with the path to your APK file
+        track: "alpha", # Change this to "alpha" if you want to upload to the alpha track instead
+        release_status: 'draft',
+        skip_upload_metadata: true # Set this to false if you want to fill in the release metadata interactively
+      )
+    end
+end
